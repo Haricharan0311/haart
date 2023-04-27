@@ -15,6 +15,10 @@ main {
   height: 100vh;
 }
 
+.nav-prop {
+  background-color: #2f2fa2;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
