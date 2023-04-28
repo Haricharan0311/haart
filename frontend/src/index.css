@@ -25,6 +25,15 @@ main {
   justify-content: center;
 }
 
+.rating span {
+  color: rgb(241, 196, 49);
+}
+
+.btn-primary {
+  background-color: #f64c72;
+  color: #ffffff;
+}
+
 .product {
   border: 1px #2f2fa2 solid;
   margin: 1rem;

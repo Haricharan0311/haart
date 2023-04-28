@@ -41,7 +41,7 @@ function HomeScreen() {
   }, []);
   return (
     <div>
-      <h1 style={{ marginTop: 15 }}>Featured Products</h1>
+      <h1 style={{ marginTop: 15, marginBottom: 15 }}>Featured Products</h1>
       <div className="products">
         {loading ? (
           <div> Loading... </div>
