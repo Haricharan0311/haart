@@ -18,7 +18,7 @@ const data = {
       category: 'Woodwork',
       image: '/images/p2.jpg', // 679px × 829px
       price: 120,
-      countInStock: 10,
+      countInStock: 0,
       artist: 'Ram',
       rating: 4.5,
       numReviews: 10,

@@ -4,6 +4,7 @@ import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from './component/Product';
+import { Helmet } from 'react-helmet-async';
 
 //reducer instead of state, if states are complex and temporally dependent
 //state - current state; action - performed action
@@ -41,6 +42,9 @@ function HomeScreen() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Haart</title>
+      </Helmet>
       <h1 style={{ marginTop: 15, marginBottom: 15 }}>Featured Products</h1>
       <div className="products">
         {loading ? (
