@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from './component/Product';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from './component/LoadingBox';
+import MessageBox from './component/MessageBox';
 
 //reducer instead of state, if states are complex and temporally dependent
 //state - current state; action - performed action
@@ -48,9 +50,13 @@ function HomeScreen() {
       <h1 style={{ marginTop: 15, marginBottom: 15 }}>Featured Products</h1>
       <div className="products">
         {loading ? (
-          <div> Loading... </div>
+          <div>
+            <LoadingBox />
+          </div>
         ) : error ? (
-          <div> {error} </div>
+          <div>
+            <MessageBox variant="danger">{error}</MessageBox>
+          </div>
         ) : (
           <Row>
             {products.map((product) => (
