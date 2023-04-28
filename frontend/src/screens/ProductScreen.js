@@ -47,16 +47,26 @@ function ProductScreen() {
       }
     };
     fetchData();
-  }, [slug]);
-
-  //slug is the dependency; change in slug triggers useEffect to get new product
+  }, [slug]); //slug is the dependency; change in slug triggers useEffect to get new product
 
   //defining addToCarthandler
   const { state, dispatch: ctxDispatch } = useContext(Store);
-  const addToCartHandler = () => {
+  //check cart items before adding
+  const { cart } = state;
+  //async because await is used
+  const addToCartHandler = async () => {
+    const existItem = cart.cartItems.find((x) => x._id === product._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    //AJAX request to make sure the quantity does not exceed stock
+    const { data } = await axios.get(`/api/products/${product._id}`);
+    if (data.countInStock < quantity) {
+      window.alert('Product is out of stock.');
+      return;
+    }
+
     ctxDispatch({
       type: 'CART_ADD_ITEM',
-      payload: { ...product, quantity: 1 },
+      payload: { ...product, quantity },
     });
   };
 
