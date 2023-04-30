@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      _id: '1',
+      //_id: '1',
       name: 'Ivory boxes',
       slug: 'ivory-box',
       category: 'Ivory',
@@ -14,7 +14,7 @@ const data = {
       description: 'Box carved in premium quality ivory',
     },
     {
-      _id: '2',
+      //_id: '2',
       name: 'Wooden Elephant',
       slug: 'wood-elephant', //what you see in URL (url friendly)
       category: 'Woodwork',
@@ -28,7 +28,7 @@ const data = {
         'Intricate work of art, with embedded mirror work in wood, carved into the shape of an elephant.',
     },
     {
-      _id: '3',
+      //_id: '3',
       name: 'Madhubani Painted Vase',
       slug: 'madhubani-vase',
       category: 'madhubani',
@@ -41,7 +41,7 @@ const data = {
       description: 'Detailed madhubani art on a vase',
     },
     {
-      _id: '4',
+      //_id: '4',
       name: 'Bronze Elephant',
       slug: 'bronze-elephant',
       category: 'bronze',
